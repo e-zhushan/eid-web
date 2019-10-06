@@ -1,0 +1,78 @@
+<html>
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/lib/jquery.js"></script>
+  <script src="http://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.11/css/bootstrap-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.11/js/bootstrap-select.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.11/js/i18n/defaults-en_US.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $("#password, #confirm_password").keyup(function(){
+        if ($('#password').val() == $('#confirm_password').val()) {
+          $('#ConfirmMessage').html('密碼相符').css('color', 'green');
+        } else
+          $('#ConfirmMessage').html('密碼不符').css('color', 'red');
+        });
+    });
+  </script>
+
+  <title>註冊新帳號</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-white bg-white static-top">
+    <div class="container">
+      <a class="navbar-brand" href="http://www.townway.com.tw">
+        <img src="static/img/pages/logo.jpg" style="width:70;height:70;">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" 
+	      data-target="#navbarResponsive" aria-controls="navbarResponsive" 
+	      aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>註冊新帳號</h2>
+	<p><small>請填寫下表，您將註冊新的帳號：</small></p>
+        <form id="RegisterForm" method="post" action="">
+          <div class="form-group">
+            <label for="Account">帳號:</label>
+            <input type="text" class="form-control" name="account" placeholder="請輸入您的帳號，長度為 10 碼">
+          </div>
+          <div class="form-group">
+            <label for="Email">Email:<font color="blue"> (選填: 忘記密碼時可透過 E-Mail 重設) </font> </label>
+            <input type="email" class="form-control" name="email" placeholder="">
+            <label for="Password">密碼:</label>
+            <input type="password" class="form-control" id="password" name="password">
+            <label for="ConfirmPassword">確認密碼:</label>
+            <input type="password" class="form-control" id="confirm_password" name="confirm_password">
+	    <span id="ConfirmMessage"></span>
+          </div>
+          <input type="submit" id="submit" name="submit" value="Submit" class="btn btn-primary">
+        </form>
+      </div> <!-- col -->
+    </div> <!-- row -->
+  </div> <!-- container -->
+</body>
+</html>
