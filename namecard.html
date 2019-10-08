@@ -11,10 +11,6 @@
     background-color: white;
   }
   
-  .bg-cover{
-    background-size: cover;
-    background-position: center center;
-  }
   .card-shadow{
     box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.16);
   }
@@ -71,76 +67,8 @@
         </div>
       </div>
       <div class="col-md-5">
-
-        <img src="static/img/pages/me.png" class="card-img d-none d-md-block" alt="">
-        <div style="background-image: url(static/img/pages/me.png); height: 200px" class="card-img d-md-none bg-cover"></div>
+        <img src="static/img/pages/me.png" class="card-img" alt="">
       </div>
     </div>
   </div>
-</div>
-<div class="container d-flex justify-content-center">
-  <span class="border border-warning my-5 d-none d-md-block" style="width: 85%"></span>
-  <span class="border border-warning my-5 d-md-none" style="width: 80%"></span>
-</div>
-
-<div class="container d-flex justify-content-center">
-  <div
-    class="card mb-3 card-bg-eid rounded-0 card-shadow border-warning"
-    style="max-width: 80%"
-  >
-    <div class="row no-gutters">
-      <div class="col-md-7">
-        <div class="card-body">
-          <div class="h6 text-warning d-none d-md-block">
-            <p class="mr-3  mb-0">數位鎮民身份證</p>
-            <p>The eID card for digital townee.</p>
-          </div>
-          <div class="text-warning d-block d-md-none">
-              <p class="mr-3 d-none d-sm-block mb-0">數位鎮民身份證</p>
-              <p>The eID card for digital townee.</p>
-          </div>
-          <div class="h3 mt-lg-5 pt-lg-5 d-none d-lg-block">證號： {{ user.id }}</div>
-          <div class="h3 mt-md-4 pt-md-4 d-none d-md-block d-lg-none ">證號： {{ user.id }}</div>
-          <div class="h5 d-block d-md-none">{{ user.id }}</div>
-          <div class="d-lg-flex mt-4">
-            <p class="mr-lg-3 d-none d-lg-block">生日： 2019</p>
-            <p class="mr-lg-3 d-none d-lg-block">職業： 鎮民</p>
-            <p class="d-none d-lg-block">光幣： {{ balance }} 枚</p>
-          </div>
-          <div class="d-flex d-lg-none mt-3">
-              <img
-                src="static/img/pages/birthday.svg"
-                class="mr-1"
-                style="max-height: 20px"
-                alt="生日"
-              />
-              <p class="mr-3">2019</p>
-              <img
-                src="static/img/pages/career.svg"
-                class="mr-1"
-                style="max-height: 20px"
-                alt="職業"
-              />
-              <p class="mr-3">鎮民</p>
-              <img
-                src="static/img/pages/coin.svg"
-                class="mr-1"
-                style="max-height: 20px"
-                alt="光幣"
-              />
-              <p>{{ balance }} 枚</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-5">
-
-        <img src="static/img/pages/me.png" class="card-img d-none d-md-block" alt="">
-        <div style="background-image: url(static/img/pages/me.png); height: 200px" class="card-img d-md-none bg-cover"></div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="container d-flex justify-content-center">
-  <span class="border border-warning my-5 d-none d-md-block" style="width: 85%"></span>
-  <span class="border border-warning my-5 d-md-none" style="width: 80%"></span>
 </div>
