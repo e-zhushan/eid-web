@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+{% block content %}
+
+<html>
+  <head>
+    <title>竹山數位鎮民 - 小鎮星球</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-12/css/all.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+      body {
+        font-family: "微軟正黑體", "Microsoft JhengHei", arial, sans-serif;
+      }
+    </style>
+  </head>
+
+  <body>
+	<form method="post" action="profile">
+	<nav class="navbar navbar-light bg-warning mb-2">
+      <div class="container d-flex justify-content-center">
+          <div class="form-row align-items-center">
+            <div class="col-md-5 mb-2 mb-md-0">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    id="button-addon1"
+                  >
+                    <i class="fas fa-user"></i>
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  name="username"
+                  class="form-control"
+                  placeholder="請輸入帳號"
+                  aria-label="Example text with button addon"
+                  aria-describedby="button-addon1"
+                />
+              </div>
+            </div>
+            <div class="col-md-4 mb-2 mb-md-0">
+              <div class="input-group ml-md-2">
+                <div class="input-group-prepend">
+                  <button
+                    class="btn btn-secondary"
+                    type="button"
+                    id="button-addon2"
+                  >
+                    <i class="fas fa-lock"></i>
+                  </button>
+                </div>
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  placeholder="請輸入密碼"
+                  aria-label="Example text with button addon"
+                  aria-describedby="button-addon2"
+                />
+              </div>
+            </div>
+            <div
+              class="col-md-3 d-flex justify-content-end align-items-center pt-0"
+            >
+              <a class="text-white d-none d-md-block ml-2" href=""
+                >忘記密碼？</a
+              >
+              <a
+                class="btn btn-outline-secondary ml-2 d-none d-md-block"
+                href="https://eid.townway.com.tw/register"
+                role="button"
+                >註冊</a
+              >
+            </div>
+            <div class="col d-flex justify-content-end d-md-none">
+              <a class="text-white d-flex align-items-center" href=""
+                >忘記密碼？</a
+              >
+              <a
+                class="btn btn-outline-secondary ml-2"
+                href="https://eid.townway.com.tw/register"
+                role="button"
+                >註冊</a
+              >
+            </div>
+          </div>
+      </div>
+	</nav>
+	    <div class="container d-flex justify-content-center">
+      <div class="row">
+        <div class="col-md-9 text-center">
+          <p>
+            <font size="3" color="red">{{message}}</font>
+          </p>
+          <form>
+            <button class="btn btn-outline-light" type="submit">
+              <img
+                src="static/imgs/login_back.png"
+                class="img-responsive"
+                height="100%"
+                width="100%"
+              />
+            </button>
+
+        </div>
+      </div>
+	</div>
+</form>
+
+</body>
+</html>
+
+{% endblock %}
