@@ -1,3 +1,4 @@
+{% block content %}
 <html>
 <head> 
   <meta charset="utf-8">
@@ -28,7 +29,7 @@
   <nav class="navbar navbar-expand-lg navbar-white bg-white static-top">
     <div class="container">
       <a class="navbar-brand" href="http://www.townway.com.tw">
-        <img src="static/img/pages/logo.jpg" style="width:70;height:70;">
+        <img src="static/imgs/logo.jpg" style="width:70;height:70;">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" 
 	      data-target="#navbarResponsive" aria-controls="navbarResponsive" 
@@ -54,6 +55,7 @@
     <div class="row">
       <div class="col-md-8">
         <h2>註冊新帳號</h2>
+	<font size="3" color="red">{{ message }}</font>
 	<p><small>請填寫下表，您將註冊新的帳號：</small></p>
         <form id="RegisterForm" method="post" action="">
           <div class="form-group">
@@ -76,3 +78,4 @@
   </div> <!-- container -->
 </body>
 </html>
+{% endblock %}
